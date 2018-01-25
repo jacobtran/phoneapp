@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('input[type=password]').keypress(function(event){
+          // console.log(event.keyCode);
+          console.log(event.key);
+          // console.log("A key was pressed");
+        });
+
+        $('form').submit(function(event){
+          event.preventDefault();
+          console.log("i can now know when the form is submitted");
+          //window.location.href = "http://reddit.com";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Login to my Super Secure Form!</h1>
+    <img src="lock.jpg" />
+    <form action="http://disneyland.com" method="POST">
+      <div>
+        <label>User Name: </label>
+        <input type="text" placeholder="e.g. johndoe" />
+      </div>
+      <div>
+        <label>Password: </label>
+        <input type="password" />
+      </div>
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
